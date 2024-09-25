@@ -65,10 +65,10 @@ ${data.desc}
 ${data.time}
 ●━━━━━━━━━━━━━━━━━━━●
 
-> 🗞️ *News From hirunews.lk*
+> *🗞️ News From hirunews.lk*
 
-> 🔗 *Created By Mr Charuka*
-🪩 group ÷ link https://chat.whatsapp.com/JPgILcY8jPB3Xx1Z19aenE
+> *🔗 Created By Mr Charuka*
+🪩 group link: *https://chat.whatsapp.com/JPgILcY8jPB3Xx1Z19aenE*
 
 ●━━━━━━━━━━━━━━━━━━━●`
          let newss = await news1.findOne({ id: '123' }) 
