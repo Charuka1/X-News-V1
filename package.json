@@ -3,11 +3,10 @@
     "version": "1.0.0",
     "description": "Multi device whatsapp news bot by Jithula",
     "main": "index.js",
-    "start": "mp2 start", 
+    "type": "mp2 start", 
     "scripts": {
           "start": "node index.js  --attach --name moxie", 
-          "stop": "node stop moxier",
-    "restart": "pm2 restart X-news-v1"
+          "stop": "node stop moxier"
     },
     "author": "Jithula",
     "license": "GPL-3.0",
