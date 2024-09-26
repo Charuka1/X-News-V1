@@ -6,7 +6,8 @@
     "start": "mp2 start", 
     "scripts": {
           "start": "node index.js  --attach --name moxie", 
-          "stop": "node stop moxier" 
+          "stop": "node stop moxier",
+    "restart": "pm2 restart X-news-v1"
     },
     "author": "Jithula",
     "license": "GPL-3.0",
