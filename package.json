@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Multi device whatsapp news bot by Jithula",
     "main": "index.js",
-    "type": "commonjs", 
+    "type": "mp2 start", 
     "scripts": {
           "start": "node index.js  --attach --name moxie", 
           "stop": "node stop moxier"
