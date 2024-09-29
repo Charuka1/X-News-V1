@@ -56,7 +56,7 @@ const request = require('@cypress/request');
   
  async function news() { 
   
-     let response = await fetch('https://hirunews-api-x.cleverapps.io/api/latest'); 
+     let response = await fetch('https://dark-yasiya-news-apis.vercel.app/'); 
      let data = await response.json(); 
 let mg =`*${data.title}* 
 ●⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋●  
