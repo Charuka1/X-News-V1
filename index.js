@@ -72,7 +72,7 @@ ${data.desc}
 > ᴍᴀᴅᴇ ʙʏ ᴍʀ ᴄʜᴀʀᴜᴋᴀ 
 
 ●⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌●`
-         let newss = await news1.findOne({ id: '123' }) 
+         let newss = await news1.findOne({ id: '12345678' }) 
   
      if (!newss) { 
          await new news1({ id: '123', newsid: data.id, events:'true' }).save() 
@@ -83,7 +83,7 @@ ${data.desc}
            return 
           } 
           else{ 
-             await news1.updateOne({ id: '123' }, { newsid : data.id, events:'true'}) 
+             await news1.updateOne({ id: '12345678' }, { newsid : data.id, events:'true'}) 
              await session.sendMessage("120363320172873548@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
           } 
   
