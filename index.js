@@ -1,5 +1,5 @@
 const axios = require("axios");
-const hirunews = require('hirunews-scraper')
+const Hiru = require('hirunews-scrap');
  const mongoose = require('mongoose'); 
  const CryptoJS = require("crypto-js"); 
 const makeWASocket = require("@whiskeysockets/baileys").default
@@ -56,8 +56,12 @@ const request = require('@cypress/request');
                      if (connection == "open") { 
   
  async function news() {
-const newsdata = await hirunews();
-const output = newsdata.result;
+
+const api = new Hiru()
+  const news = await api.RecentNews();
+console.log(news);
+
+  
 let mg =`*${data.title}* 
 ●⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋●  
 ${data.desc} 
