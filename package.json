@@ -19,6 +19,7 @@
         "axios": "latest",
         "node-fetch": "^3.3.2",
         "mongoose":"latest",
+        "hirunews-scraper":"3.0.0",
         "path": "^0.12.7",
         "pino": "^9.4.0"
     }
