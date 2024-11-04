@@ -55,7 +55,7 @@ const request = require('@cypress/request');
                      } = s 
                      if (connection == "open") { 
   
- async function news() {
+
 
 async function news() {
 const newsdata = await Hiru();
