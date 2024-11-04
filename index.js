@@ -57,9 +57,9 @@ const request = require('@cypress/request');
   
  async function news() {
 
-const api = new Hiru()
-  const news = await api.RecentNews();
-console.log(news);
+async function news() {
+const newsdata = await Hiru();
+const output = newsdata.result;
 
   
 let mg =`*${data.title}* 
