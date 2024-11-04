@@ -1,4 +1,5 @@
-const axios = require("axios"); 
+const axios = require("axios");
+const hirunews = require('hirunews-scraper')
  const mongoose = require('mongoose'); 
  const CryptoJS = require("crypto-js"); 
 const makeWASocket = require("@whiskeysockets/baileys").default
@@ -54,10 +55,9 @@ const request = require('@cypress/request');
                      } = s 
                      if (connection == "open") { 
   
- async function news() { 
-  
-     let response = await fetch('https://hirunews-api-x.cleverapps.io/api/latest'); 
-     let data = await response.json(); 
+ async function news() {
+const newsdata = await hirunews();
+const output = newsdata.result;
 let mg =`*${data.title}* 
 ●⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋●  
 ${data.desc} 
