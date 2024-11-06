@@ -1,9 +1,9 @@
-const axios = require("axios");
-const hirunews = require('hirunews-scrap');
+const axios = require("axios"); 
  const mongoose = require('mongoose'); 
  const CryptoJS = require("crypto-js"); 
 const makeWASocket = require("@whiskeysockets/baileys").default
 const { delay ,Browsers,MessageRetryMap,fetchLatestBaileysVersion,WA_DEFAULT_EPHEMERAL,useMultiFileAuthState,makeInMemoryStore } = require("@whiskeysockets/baileys")
+
     const pino = require("pino");
 const request = require('@cypress/request');
 // replace the value below with the Telegram token you receive from @BotFather
@@ -13,11 +13,14 @@ const request = require('@cypress/request');
  newsid : { type: String }, 
  }) 
  const news1 =  mongoose.model("news1", UserSchema) 
+ const apilink3 = 'https://dark-yasiya-news-apis.vercel.app/api' // API LINK ( DO NOT CHANGE THIS!! )
+
+
   
   
          async function XAsena() { 
              mongoose.connect('mongodb+srv://Jithula:Jithula@cluster0.i9f4p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0') 
-   .then(() => console.log('✅Connected Sucess!✅')); 
+   .then(() => console.log('✅Connected Sucess✅')); 
   
              const { state, saveCreds } = await useMultiFileAuthState(__dirname+'/session')
             const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
@@ -55,40 +58,39 @@ const request = require('@cypress/request');
                      } = s 
                      if (connection == "open") { 
   
-
-
-async function news() {
-const newsdata = await hirunews();
-const output = newsdata.result;
-
+ async function news() { 
   
-let mg =`*${data.title}* 
-●⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋●  
-${data.desc} 
-●⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋● 
-*${data.time}*
-●⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋⚋●
+   
+const news = await fetchJson(`${apilink3}/hiru`)
+   
+let mg =`
+       
+*${news.result.title}*
 
-*🗞️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜɪʀᴜ ɴᴇᴡꜱ🗞️*
+${news.result.desc}
 
-🪩 *ɢʀᴏᴜᴘ ʟɪɴᴋ*: *https://chat.whatsapp.com/JPgILcY8jPB3Xx1Z19aenE*
+\`• *Date*\` - ${news.result.date}
 
-> ᴍᴀᴅᴇ ʙʏ ᴍʀ ᴄʜᴀʀᴜᴋᴀ 
+\`• *Link*\` - ${news.result.url}
 
-●⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌⚌●`
-         let newss = await news1.findOne({ id: '23205' }) 
+     \`𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝚁 𝙲𝙷𝙰𝚁𝚄𝙺𝙰\`
+       
+ `
+
+
+         let newss = await news1.findOne({ id: '12345' }) 
   
      if (!newss) { 
-         await new news1({ id: '23205', newsid: data.id, events:'true' }).save() 
-           await session.sendMessage("120363320172873548@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
+         await new news1({ id: '12345', newsid: data.id, events:'true' }).save() 
+           await session.sendMessage("120363294092341668@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
      } else { 
          if(newss.newsid == data.id )  
           { 
            return 
           } 
           else{ 
-             await news1.updateOne({ id: '23205' }, { newsid : data.id, events:'true'}) 
-             await session.sendMessage("120363320172873548@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
+             await news1.updateOne({ id: '12345' }, { newsid : data.id, events:'true'}) 
+             await session.sendMessage("120363294092341668@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
           } 
   
      } 
