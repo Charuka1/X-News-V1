@@ -13,9 +13,10 @@ const request = require('@cypress/request');
  newsid : { type: String }, 
  }) 
  const news1 =  mongoose.model("news1", UserSchema) 
- const apilink3 = 'https://dark-yasiya-news-apis.vercel.app/api' // API LINK ( DO NOT CHANGE THIS!! )
 
+const apilink3 = 'https://dark-yasiya-news-apis.vercel.app/api' // API LINK ( DO NOT CHANGE THIS!! )
 
+  
   
   
          async function XAsena() { 
@@ -60,8 +61,9 @@ const request = require('@cypress/request');
   
  async function news() { 
   
+ 
    
-const news = await fetchJson(`${apilink3}/hiru`)
+let news = await fetchJson(`${apilink3}/hiru`)
    
 let mg =`
        
