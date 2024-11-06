@@ -62,7 +62,7 @@ const request = require('@cypress/request');
   
  
      let response = await fetch('https://dark-yasiya-news-apis.vercel.app/api'); 
-     let data = await response(`${apilink3}/hiru`); 
+     let data = await response(`${response}/hiru`); 
    
 
    
