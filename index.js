@@ -14,7 +14,6 @@ const request = require('@cypress/request');
  }) 
  const news1 =  mongoose.model("news1", UserSchema) 
 
-const apilink3 = 'https://dark-yasiya-news-apis.vercel.app/api' // API LINK ( DO NOT CHANGE THIS!! )
 
   
   
@@ -62,8 +61,10 @@ const apilink3 = 'https://dark-yasiya-news-apis.vercel.app/api' // API LINK ( DO
  async function news() { 
   
  
+     let response = await fetch('https://dark-yasiya-news-apis.vercel.app/api'); 
+     let data = await response(`${apilink3}/hiru`); 
    
-let news = await fetchJson(`${apilink3}/hiru`)
+
    
 let mg =`
        
