@@ -85,7 +85,7 @@ ${news.result.desc}
   
      if (!newss) { 
          await new news1({ id: '12345', newsid: data.id, events:'true' }).save() 
-           await session.sendMessage("120363294092341668@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
+           await session.sendMessage("120363294092341668@g.us",{image: { url: news.result.image || '' }, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
      } else { 
          if(newss.newsid == data.id )  
           { 
