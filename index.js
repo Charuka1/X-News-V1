@@ -61,8 +61,8 @@ const request = require('@cypress/request');
  async function news() { 
   
  
-     let response = await fetch('https://dark-yasiya-news-apis.vercel.app/api'); 
-     let data = await response(`${response}/hiru`); 
+     const apilink = 'https://dark-yasiya-news-apis.vercel.app/api'
+     const news = await fetchJson(`${apilink}/hiru`); 
    
 
    
