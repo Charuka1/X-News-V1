@@ -61,22 +61,18 @@ const request = require('@cypress/request');
   
      let response = await fetch('https://news-updater-nima-4fcd9bded850.herokuapp.com/api/hiru'); 
      let data = await response.json(); 
-let mg =`*${data.title}* 
-●━━━━━━━━━━━━━━━━━━━━━●  
+let mg =`🗞️*${data.title}🗞️* 
+────────────────────── 
 ${data.desc} 
-●━━━━━━━━━━━━━━━━━━━━━● 
+──────────────────────
 ${data.time}
-●━━━━━━━━━━━━━━━━━━━━━●
+──────────────────────
 
-🗞️ *News From hirunews.lk*
+*\`News From hirunews.lk\`*
 
-🔗 *Created By Jithula Bhasitha*
+\`CREATE BY MR CHARUKA\`
 
-📍 *Team Bit X*
-
-📰 *Group Link* :- https://chat.whatsapp.com/I89POhTW6cN03tC01Aoo47
-
-●━━━━━━━━━━━━━━━━━━━━━●`
+──────────────────────`
 
          let newss = await news1.findOne({ id: '12345' }) 
   if (!newss) { 
