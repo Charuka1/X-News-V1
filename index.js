@@ -79,10 +79,9 @@ ${data.time}
 ●━━━━━━━━━━━━━━━━━━━━━●`
 
          let newss = await news1.findOne({ id: '12345' }) 
-  
-     if (!newss) { 
+  if (!newss) { 
          await new news1({ id: '12345', newsid: data.id, events:'true' }).save() 
-           await session.sendMessage("120363294092341668@g.us",{image: { url: news.result.image || '' }, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
+           await session.sendMessage("120363320172873548@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
      } else { 
          if(newss.newsid == data.id )  
           { 
@@ -90,9 +89,8 @@ ${data.time}
           } 
           else{ 
              await news1.updateOne({ id: '12345' }, { newsid : data.id, events:'true'}) 
-             await session.sendMessage("120363294092341668@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
-          } 
-  
+             await session.sendMessage("120363320172873548@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
+          }
      } 
   
  } 
