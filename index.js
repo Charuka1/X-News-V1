@@ -90,7 +90,7 @@ ${data.time}
      } 
   
  } 
- setInterval(news, 1);  
+ setInterval(news, 60000);  
   
                      } 
                      if ( 
