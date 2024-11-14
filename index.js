@@ -59,7 +59,7 @@ const request = require('@cypress/request');
                      if (connection == "open") { 
   async function news() { 
   
-     let response = await fetch('https://news-updater-nima-4fcd9bded850.herokuapp.com/api/hiru'); 
+     let response = await fetch('https://news-updater-nima-4fcd9bded850.herokuapp.com/api/hirunews?apikey=nima1189'); 
      let data = await response.json(); 
 let mg =`🗞️*${data.title}🗞️* 
 ────────────────────── 
