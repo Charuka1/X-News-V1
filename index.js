@@ -57,29 +57,26 @@ const request = require('@cypress/request');
                          lastDisconnect 
                      } = s 
                      if (connection == "open") { 
+  async function news() { 
   
- async function news() { 
-  
- 
-     const apilink = 'https://dark-yasiya-news-apis.vercel.app/api'
-     const news = await fetchJson(`${apilink}/hiru`); 
-   
+     let response = await fetch('https://news-updater-nima-4fcd9bded850.herokuapp.com/api/hiru'); 
+     let data = await response.json(); 
+let mg =`*${data.title}* 
+●━━━━━━━━━━━━━━━━━━━━━●  
+${data.desc} 
+●━━━━━━━━━━━━━━━━━━━━━● 
+${data.time}
+●━━━━━━━━━━━━━━━━━━━━━●
 
-   
-let mg =`
-       
-*${news.result.title}*
+🗞️ *News From hirunews.lk*
 
-${news.result.desc}
+🔗 *Created By Jithula Bhasitha*
 
-\`• *Date*\` - ${news.result.date}
+📍 *Team Bit X*
 
-\`• *Link*\` - ${news.result.url}
+📰 *Group Link* :- https://chat.whatsapp.com/I89POhTW6cN03tC01Aoo47
 
-     \`𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝚁 𝙲𝙷𝙰𝚁𝚄𝙺𝙰\`
-       
- `
-
+●━━━━━━━━━━━━━━━━━━━━━●`
 
          let newss = await news1.findOne({ id: '12345' }) 
   
