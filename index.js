@@ -65,19 +65,20 @@ let mg =`🗞️*${data.title}🗞️*
 ────────────────────── 
 ${data.desc} 
 ──────────────────────
-${data.time}
+*${data.time}*
 ──────────────────────
 
 *\`News From hirunews.lk\`*
 
-\`CREATE BY MR CHARUKA\`
+*\`CREATE BY MR CHARUKA\`*
 
+*\`Url\`*
 ──────────────────────`
 
          let newss = await news1.findOne({ id: '12345' }) 
   if (!newss) { 
          await new news1({ id: '12345', newsid: data.id, events:'true' }).save() 
-           await session.sendMessage("120363339224309117@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
+           await session.sendMessage("120363320172873548@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
      } else { 
          if(newss.newsid == data.id )  
           { 
@@ -85,7 +86,7 @@ ${data.time}
           } 
           else{ 
              await news1.updateOne({ id: '12345' }, { newsid : data.id, events:'true'}) 
-             await session.sendMessage("120363339224309117@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
+             await session.sendMessage("120363320172873548@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
           }
      } 
   
